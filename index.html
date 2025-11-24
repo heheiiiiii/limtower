@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>임지훈을 쌓아라 - 임타워</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- 상단 바 -->
+    <header class="top-bar">
+      <h1 class="game-title">임지훈을 쌓아라 (임타워)</h1>
+      <div class="score-panel">
+        <span>현재 층수: <span id="current-score">0</span></span>
+        <span>최고 기록: <span id="best-score">0</span></span>
+      </div>
+    </header>
+
+    <!-- 게임 영역 -->
+    <main class="game-area">
+      <canvas id="game-canvas" width="400" height="600"></canvas>
+    </main>
+
+    <!-- 하단 안내 -->
+    <footer class="bottom-bar">
+      <p>클릭 또는 스페이스바로 블록을 떨어뜨리세요.</p>
+    </footer>
+
+    <!-- 게임 오버 / 안내 오버레이 -->
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 id="overlay-title">지훈이 실망했습니다.</h2>
+        <p id="overlay-message">블록이 바닥으로 떨어졌어요. 다시 도전하시겠습니까?</p>
+        <div class="overlay-buttons">
+          <button id="btn-restart">다시하기</button>
+          <button id="btn-home">처음 화면으로</button>
+          <button id="btn-share">공유하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
