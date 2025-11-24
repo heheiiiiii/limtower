@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #87cefa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-wrapper {
+  width: 420px;
+  max-width: 100%;
+  background: #f4f9ff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 바 */
+.top-bar {
+  background: #ffffff;
+  padding: 10px 16px;
+  border-bottom: 1px solid #dde6ff;
+}
+
+.game-title {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.score-panel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* 게임 영역 */
+.game-area {
+  background: linear-gradient(to bottom, #87cefa 0%, #cbe7ff 60%, #f4f9ff 100%);
+  padding: 8px 10px;
+}
+
+#game-canvas {
+  width: 100%;
+  display: block;
+  background: transparent;
+  border-radius: 12px;
+  border: 2px solid #ffffffaa;
+}
+
+/* 하단 안내 */
+.bottom-bar {
+  padding: 10px 16px 14px;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  background: #ffffff;
+  border-top: 1px solid #dde6ff;
+}
+
+/* 오버레이 */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: #ffffff;
+  padding: 20px 18px 18px;
+  border-radius: 14px;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.overlay-content p {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.overlay-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overlay-buttons button {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #ff6b81;
+  color: #fff;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.2s;
+}
+
+.overlay-buttons button:hover {
+  background: #ff4f6c;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.overlay-buttons button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* 다시하기/처음/공유 버튼 색 조금씩 구분 */
+#btn-restart {
+  background: #ff6b81;
+}
+
+#btn-home {
+  background: #4e7bff;
+}
+
+#btn-share {
+  background: #34a853;
+}
